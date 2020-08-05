@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {% block title %}
+        <title>Base Page</title>
+
+        {% endblock %}
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css" integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/js/bootstrap.min.js" integrity="sha384-XEerZL0cuoUbHE4nZReLT7nx9gQrQreJekYhJD9WNWhH8nEW+0c5qq7aIo2Wl30J" crossorigin="anonymous"></script>
+
+    </head>
+    <body>
+        {% include "partials/_topbar.html" %}
+        {% include "partials/_navbar.html" %}
+
+        {% block content %}
+        <div class="container">
+            <div class="jumbotron">
+                <h1>Welcome to base page</h1>
+            </div>
+        </div>
+        {% endblock %}
+
+        {% include "partials/_footer.html" %}
+    </body>
+</html>
